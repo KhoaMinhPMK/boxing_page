@@ -1,0 +1,2589 @@
+/*
+Theme Name: Page Boxing Theme
+Theme URI: http://example.com/pageboxing-theme
+Author: V-SRA
+Description: Custom built theme for MMA/Boxing. Pixel Perfect.
+Version: 1.3
+*/
+
+/* --- 1. RESET & CORE --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #f0f0f0;
+    /* Nền xám nhẹ làm nổi bật vùng trắng trung tâm */
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- 2. HEADER (LOGO) --- */
+.site-header-clean {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.563vw 0 0 0;
+    /* 30px */
+}
+
+.site-branding {
+    max-width: 72.917vw;
+    /* 1400px */
+    margin: 0 auto;
+    padding-left: 2.604vw;
+    /* 50px */
+}
+
+/* Logo Badge */
+.site-branding img,
+.site-title a div {
+    /* Hiệu ứng đổ bóng nhẹ cho logo nổi lên */
+    filter: drop-shadow(0 0.104vw 0.208vw rgba(0, 0, 0, 0.2));
+    max-width: 4.688vw;
+    /* 90px */
+    margin: 0;
+    /* Reset margin để cạnh trái logo khớp chính xác */
+    display: block;
+}
+
+.custom-logo-link {
+    display: block;
+    line-height: 0;
+    /* Loại bỏ khoảng trắng thừa */
+}
+
+
+/* --- 3. HERO SECTION --- */
+.hero-section {
+    position: relative;
+    padding-top: 7.292vw;
+    /* 140px */
+    padding-bottom: 2.604vw;
+    /* 50px */
+    min-height: 100vh;
+    /* Gradient nền giống ảnh: Trắng ở giữa, xám khói lan tỏa ra ngoài */
+    background: radial-gradient(circle at 70% 50%, #ffffff 20%, #e6e6e6 100%);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 72.917vw;
+    /* 1400px */
+    margin: 0 auto;
+    padding: 0 2.604vw;
+    /* 50px */
+    width: 100%;
+}
+
+.hero-container {
+    display: flex;
+    align-items: flex-start;
+    /* Căn hàng ngang bắt đầu từ trên */
+    justify-content: space-between;
+}
+
+/* --- LEFT COLUMN: TYPOGRAPHY --- */
+.hero-content {
+    flex: 1;
+    max-width: 50%;
+    z-index: 10;
+    padding-left: 0;
+    /* Căn lề trái khớp với container */
+}
+
+/* Cấu trúc Tiêu đề Chính */
+.hero-title {
+    font-family: 'Oswald', sans-serif;
+    /* Font chuẩn MMA */
+    text-transform: uppercase;
+    color: #000;
+    line-height: 0.95;
+    /* Tăng khoảng cách dòng để chữ không dính */
+    margin-bottom: 1.302vw;
+    /* 25px */
+}
+
+/* Dòng 1: MMA + Gold Text */
+.title-row-mixed {
+    display: flex;
+    align-items: flex-start;
+    /* Căn đỉnh chữ */
+    gap: 0.781vw;
+    /* 15px */
+    margin-bottom: 0;
+}
+
+.text-mma {
+    font-size: 6.771vw;
+    /* 130px */
+    font-weight: 700;
+    letter-spacing: -0.156vw;
+    /* -3px */
+    transform: scaleY(1.1);
+    /* Kéo dài chữ theo chiều dọc một chút cho giống ảnh */
+}
+
+/* Khối chữ vàng nhỏ */
+.text-stack-gold {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 0.781vw;
+    /* 15px */
+}
+
+.text-stack-gold span {
+    display: block;
+    font-family: 'Teko', sans-serif;
+    /* Font phụ vuông vức */
+    font-weight: 600;
+    font-style: italic;
+    color: #f0af2d;
+    /* Màu vàng cam chuẩn ảnh */
+    font-size: 1.823vw;
+    /* 35px */
+    line-height: 1.0;
+    /* Khoảng cách vừa phải giữa 2 dòng */
+    letter-spacing: 0.026vw;
+    /* 0.5px */
+}
+
+.gold-upper {
+    color: #eab336;
+}
+
+.gold-lower {
+    color: #f7bd42;
+}
+
+/* Các dòng chữ lớn: GRAPPLING, BOXING */
+.title-block {
+    font-size: 6.771vw;
+    /* 130px */
+    font-weight: 700;
+    letter-spacing: -0.208vw;
+    /* -4px */
+    transform: scaleY(1.1);
+    /* Kéo cao chữ */
+    margin-left: -0.26vw;
+    /* -5px */
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0.26vw;
+    /* 5px */
+}
+
+/* Đoạn văn mô tả */
+.hero-desc {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.99vw;
+    /* 19px */
+    color: #111;
+    font-weight: 600;
+    /* Đậm hơn chút */
+    margin-bottom: 2.344vw;
+    /* 45px */
+    max-width: 28.646vw;
+    /* 550px */
+    line-height: 1.4;
+    text-shadow: 0 0 0.052vw rgba(255, 255, 255, 0.5);
+    /* 1px */
+}
+
+/* --- BUTTONS (ĐIỂM NHẤN) --- */
+.hero-buttons {
+    display: flex;
+    gap: 0.781vw;
+    /* 15px */
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.604vw;
+    /* 50px */
+    padding: 0 2.083vw;
+    /* 40px */
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.677vw;
+    /* 13px */
+    letter-spacing: 0.078vw;
+    /* 1.5px */
+    transform: skew(-20deg);
+    /* Góc nghiêng */
+    transition: all 0.3s ease;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-style: italic;
+    box-shadow: 0.208vw 0.208vw 0.625vw rgba(0, 0, 0, 0.12);
+    /* 4px 4px 12px */
+}
+
+.btn span {
+    transform: skew(20deg);
+    /* Chữ đứng thẳng lại */
+    white-space: nowrap;
+    /* QUAN TRỌNG: Text không xuống dòng */
+}
+
+/* Nút Vàng (Gold Gradient) - Nút dài hơn */
+.btn-gold {
+    background: linear-gradient(90deg, #c19541 0%, #d4a753 40%, #edd88b 100%);
+    color: #1a1a1a;
+    border: none;
+    min-width: 14.583vw;
+    /* 280px */
+}
+
+.btn-gold:hover {
+    background: linear-gradient(90deg, #edd88b 0%, #d4a753 60%, #c19541 100%);
+    transform: skew(-20deg) translateY(-0.104vw);
+    /* -2px */
+    box-shadow: 0.26vw 0.417vw 0.938vw rgba(193, 149, 65, 0.35);
+    /* 5px 8px 18px */
+}
+
+/* Nút Viền (Outline) - Nút ngắn hơn */
+.btn-outline {
+    background: transparent;
+    border: 0.13vw solid #c19541;
+    /* 2.5px */
+    color: #000;
+    min-width: 9.375vw;
+    /* 180px */
+}
+
+.btn-outline:hover {
+    background: rgba(193, 149, 65, 0.1);
+    border-color: #d4a753;
+    transform: skew(-20deg) translateY(-0.104vw);
+    /* -2px */
+}
+
+/* --- RIGHT COLUMN: IMAGE --- */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-right: 2.604vw;
+    /* 50px */
+}
+
+.hero-image img {
+    max-height: 85vh;
+    object-fit: contain;
+    filter: contrast(1.1) saturate(1.1);
+    /* Tăng tương phản cho ảnh nét hơn */
+
+    /* MẶT NẠ LÀM MỜ CHÂN ẢNH (Quan trọng để giống ảnh mẫu) */
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    padding-left: 2.083vw;
+    /* 40px */
+    padding-right: 2.083vw;
+    /* 40px */
+}
+
+.placeholder-fighter {
+    display: flex;
+    justify-content: center;
+}
+
+/* --- 4. DISCIPLINES SECTION (Section 2) --- */
+.disciplines-section {
+    position: relative;
+    padding: 0;
+    background: #000;
+    /* overflow: hidden;  <-- Bỏ dòng này để cho phép cuộn nếu nội dung dài */
+}
+
+.disciplines-shape-container {
+    position: relative;
+    width: 100%;
+    /* Full màn hình */
+    margin: 0 auto;
+    padding: 0;
+    background: transparent;
+    clip-path: none;
+}
+
+/* SVG Container - Đóng vai trò Background */
+.disciplines-badge-svg {
+    position: absolute;
+    /* Chuyển thành absolute để nằm dưới */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    /* Chỉ lấy chiều cao tự nhiên của SVG */
+    line-height: 0;
+    z-index: 1;
+}
+
+.disciplines-badge-svg svg {
+    width: 100%;
+    height: auto;
+    /* SVG giữ tỷ lệ */
+    display: block;
+}
+
+/* SVG Bottom Container */
+.disciplines-badge-bottom-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    z-index: 1;
+}
+
+.disciplines-badge-bottom-svg svg,
+.disciplines-badge-bottom-svg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content bên trong SVG - Đóng vai trò chính định hình chiều cao */
+.disciplines-content {
+    position: relative;
+    /* Chuyển thành relative để chiếm diện tích thật */
+    /* top, left, width, height 100% -> Xóa bỏ */
+    width: 100%;
+    z-index: 2;
+    padding: 8.333vw 2.604vw 5.208vw;
+    /* 160px 50px 100px */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Họa tiết Line 1 phía trên tiêu đề */
+.disciplines-line-top {
+    width: 100%;
+    max-width: 20.833vw;
+    /* 400px */
+    margin: 0 auto 0.521vw;
+    /* 10px */
+    line-height: 0;
+}
+
+.disciplines-line-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 0.104vw 0.208vw rgba(0, 0, 0, 0.5));
+}
+
+/* Họa tiết Line thẳng đơn giản phía dưới tiêu đề */
+.disciplines-line-bottom-simple {
+    width: 100%;
+    max-width: 20.833vw;
+    /* 400px */
+    height: 0.104vw;
+    /* 2px */
+    background: linear-gradient(90deg, transparent, #d4a753, transparent);
+    margin: 0.521vw auto 1.042vw;
+    /* 10px top, 20px bottom */
+}
+
+.disciplines-line-bottom {
+    display: none;
+}
+
+/* Xóa các style cũ không cần thiết */
+.disciplines-badge,
+.disciplines-badge::before {
+    display: none;
+}
+
+/* Tiêu đề */
+.disciplines-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.708vw;
+    /* 52px */
+    font-weight: 800;
+    /* Font cực đậm */
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.052vw;
+    /* -1px */
+    margin: 0;
+    font-style: italic;
+    line-height: 1;
+    position: relative;
+    z-index: 2;
+    padding: 0.26vw 1.042vw;
+    /* 5px 20px */
+}
+
+/* Container dải băng vàng */
+.disciplines-title-container {
+    display: inline-block;
+    position: relative;
+    margin-top: 0;
+    /* Reset margin top vì đã có padding cha và line 1 */
+    margin-bottom: 1.042vw;
+    /* 20px */
+    padding: 0.26vw 2.083vw;
+    /* 5px 40px */
+
+    /* Gradient Vàng Đồng chuẩn ảnh: Tối -> Sáng -> Tối */
+    background: linear-gradient(90deg, rgba(34, 15, 11, 1) 0%, rgba(89, 50, 28, 1) 21%, rgba(241, 221, 128, 1) 50%, rgba(106, 64, 35, 1) 80%, rgba(62, 43, 17, 1) 100%);
+
+    /* Bo góc nhẹ hoặc để vuông tùy ảnh, ảnh có vẻ vuông */
+    box-shadow: 0 0.26vw 0.781vw rgba(0, 0, 0, 0.5);
+    /* 5px 15px */
+    width: 100%;
+    max-width: 36.458vw;
+    /* 700px */
+}
+
+/* Xóa các style cũ */
+.title-icon {
+    display: none;
+}
+
+.disciplines-title::before {
+    display: none;
+}
+
+.title-icon {
+    display: none;
+    /* Ẩn icon cũ */
+}
+
+.disciplines-subtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.677vw;
+    /* 13px */
+    font-weight: 700;
+    color: #eee;
+    letter-spacing: 0.078vw;
+    /* 1.5px */
+    margin-bottom: 1.042vw;
+    /* 20px */
+    text-transform: uppercase;
+    text-shadow: 0 0.104vw 0.208vw rgba(0, 0, 0, 0.5);
+}
+
+/* Hình ảnh võ sĩ */
+.disciplines-image {
+    margin: 1.042vw 0;
+    /* Giảm margin dọc chút để ảnh to không bị đẩy quá xa */
+    position: relative;
+}
+
+.disciplines-image img {
+    width: 100%;
+    max-width: 55vw;
+    /* Tăng từ 36.458vw lên 55vw (~1050px) */
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    filter: brightness(1.1) contrast(1.15);
+}
+
+/* Divider giữa */
+.disciplines-divider-diamonds {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.781vw;
+    /* 15px */
+    width: 100%;
+    max-width: 31.25vw;
+    /* 600px */
+    margin: 1.563vw auto;
+    /* 30px */
+}
+
+.diamond-line-left,
+.diamond-line-right {
+    flex: 1;
+    height: 0.104vw;
+    /* 2px */
+}
+
+.diamond-line-left {
+    background: linear-gradient(90deg, transparent, #d4a753);
+}
+
+.diamond-line-right {
+    background: linear-gradient(90deg, #d4a753, transparent);
+}
+
+.diamonds-group {
+    display: flex;
+    align-items: center;
+    gap: 0.26vw;
+    /* 5px */
+}
+
+.diamond-sm,
+.diamond-lg {
+    background: #d4a753;
+    transform: rotate(45deg);
+    display: block;
+}
+
+.diamond-sm {
+    width: 0.417vw;
+    /* 8px */
+    height: 0.417vw;
+}
+
+.diamond-lg {
+    width: 0.625vw;
+    /* 12px */
+    height: 0.625vw;
+}
+
+.disciplines-divider-middle {
+    display: none;
+}
+
+/* 3 cột disciplines */
+.disciplines-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.167vw;
+    /* 80px */
+    margin: 1.563vw 0;
+    /* 30px */
+}
+
+.discipline-item h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.667vw;
+    /* 32px */
+    font-weight: 700;
+    color: #999;
+    letter-spacing: 0.104vw;
+    /* 2px */
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+/* Logo Styles */
+.discipline-logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 4.167vw;
+    /* ~80px */
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0.5) grayscale(1);
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
+
+.discipline-item:hover .discipline-logo,
+.discipline-main .discipline-logo {
+    filter: brightness(1) grayscale(0);
+    transform: scale(1.3);
+    /* Tăng tỷ lệ lên xíu (cũ 1.1) */
+    max-height: 5.208vw;
+    /* Tăng chiều cao tối đa cho ảnh giữa (cũ 4.167vw) ~100px */
+}
+
+/* MMA nổi bật */
+.discipline-main h3 {
+    font-size: 2.188vw;
+    /* 42px */
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    text-underline-offset: 0.417vw;
+    /* 8px */
+    text-decoration-thickness: 0.104vw;
+    /* 2px */
+}
+
+.discipline-item:hover h3 {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Mô tả */
+.disciplines-description {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.042vw;
+    /* 20px */
+    color: #ddd;
+    line-height: 1.6;
+    max-width: 41.667vw;
+    /* 800px */
+    margin: 1.302vw auto 1.563vw;
+    /* 25px 30px */
+    font-weight: 400;
+}
+
+/* Bullet Points */
+.disciplines-list {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    /* Remove gap, use separator spacing */
+    list-style: none;
+    margin: 1.042vw 0 0;
+    /* 20px */
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.disciplines-list li {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    color: #d4a753;
+    font-weight: 600;
+    letter-spacing: 0.052vw;
+    /* 1px */
+    position: relative;
+    padding: 0 1.042vw;
+    /* 20px padding left/right */
+}
+
+/* Separator between items */
+.disciplines-list li:not(:last-child)::after {
+    content: '-';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    color: #d4a753;
+    font-weight: 400;
+}
+
+/* Remove old bullet */
+.disciplines-list li::before {
+    display: none;
+}
+
+/* Remove left padding since no bullet */
+.disciplines-list li {
+    padding-left: 1.042vw;
+}
+
+/* --- RESPONSIVE --- */
+/* Vì đã sử dụng đơn vị VW (Viewport Width), các thành phần sẽ tự động co giãn theo tỷ lệ màn hình 1920px */
+/* Tuy nhiên, trên mobile màn hình dọc, chữ sẽ trở nên quá nhỏ nếu giữ nguyên layout ngang */
+/* Do đó vẫn cần Media Query để chuyển sang dạng cột dọc cho Mobile, nhưng Font-size có thể tăng lên một chút để dễ đọc */
+
+@media (max-width: 768px) {
+    .site-header-clean {
+        padding: 20px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-left: 0;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-row-mixed {
+        justify-content: center;
+    }
+
+    /* Tăng kích thước font trên mobile để dễ đọc hơn */
+    .text-mma {
+        font-size: 15vw;
+        letter-spacing: -2px;
+    }
+
+    .title-block {
+        font-size: 15vw;
+        margin-left: 0;
+    }
+
+    .text-stack-gold span {
+        font-size: 5vw;
+    }
+
+    .hero-desc {
+        font-size: 4vw;
+        max-width: 90%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .btn {
+        height: 50px;
+        font-size: 14px;
+        padding: 0 40px;
+    }
+
+    .hero-image {
+        padding-right: 0;
+    }
+
+    .hero-image img {
+        max-height: 50vh;
+    }
+
+    /* Disciplines Section Mobile */
+    .disciplines-section {
+        padding: 0;
+        background: #000;
+    }
+
+    .disciplines-shape-container {
+        clip-path: none;
+        padding: 0;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    /* SVG Hiển thị lại trên mobile nhưng scale nhỏ */
+    .disciplines-badge-svg {
+        display: block;
+        transform: scale(1.5);
+        /* Phóng to để lấp đầy chiều ngang mobile */
+        transform-origin: top center;
+    }
+
+    .disciplines-badge-bottom-svg {
+        display: block;
+        transform: scale(1.5);
+        transform-origin: bottom center;
+    }
+
+    .disciplines-content {
+        position: absolute;
+        background: transparent;
+        border: none;
+        padding-top: 60px;
+    }
+
+    .disciplines-title {
+        font-size: 8vw;
+        padding-top: 0;
+    }
+
+    .disciplines-title-container {
+        max-width: 90%;
+    }
+
+    .disciplines-subtitle {
+        font-size: 3vw;
+        letter-spacing: 1px;
+    }
+
+    .disciplines-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .discipline-item h3 {
+        font-size: 6vw;
+    }
+
+    .discipline-logo {
+        max-height: 60px;
+    }
+
+    .discipline-main h3 {
+        font-size: 8vw;
+    }
+
+    .disciplines-description {
+        font-size: 4vw;
+        max-width: 90%;
+    }
+
+    .disciplines-list {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .disciplines-list li {
+        font-size: 3.5vw;
+    }
+}
+
+/* --- 5. AWARDS SECTION (Section 3) --- */
+.awards-section {
+    padding: 5.208vw 0;
+    /* 100px */
+    background: #fff;
+    text-align: center;
+}
+
+.awards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Decoration Line Top (Reuse SVG but Silver) */
+.awards-line-top {
+    width: 100%;
+    max-width: 20.833vw;
+    /* 400px */
+    margin: 0 auto 0.521vw;
+    /* 10px */
+    line-height: 0;
+}
+
+.awards-line-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Nếu line2.png đã là màu bạc rồi thì không cần filter */
+    /* filter: grayscale(1) brightness(0.7); */
+}
+
+/* Title Container (Silver Gradient) */
+.awards-title-container {
+    display: inline-block;
+    width: 100%;
+    /* Full width bar like design */
+    padding: 0.521vw 0;
+    /* 10px */
+    margin-bottom: 0.521vw;
+    /* 10px */
+
+    /* Silver Gradient: White -> Light Grey -> Dark Grey -> Light Grey -> White */
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(220, 220, 220, 1) 20%,
+            rgba(100, 100, 100, 1) 50%,
+            rgba(220, 220, 220, 1) 80%,
+            rgba(255, 255, 255, 0) 100%);
+
+    position: relative;
+}
+
+/* Line ngăn cách giữa Section 3 và Section 4 */
+.section-divider-full {
+    width: 100%;
+    height: 0.104vw;
+    /* 2px */
+    background-color: #000;
+    margin: 0;
+}
+
+/* Title Text */
+.awards-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.125vw;
+    /* 60px */
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    font-style: italic;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 0.052vw;
+    /* 1px */
+    text-shadow: 0.104vw 0.104vw 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Simple Bottom Line */
+.awards-line-bottom {
+    width: 100%;
+    max-width: 26.042vw;
+    /* 500px */
+    height: 0.104vw;
+    /* 2px */
+    background: linear-gradient(90deg, transparent, #888, transparent);
+    margin: 0 auto 1.563vw;
+    /* 30px */
+}
+
+/* Description */
+.awards-description {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    color: #000;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 52.083vw;
+    /* 1000px */
+    margin: 0 auto 3.125vw;
+    /* 60px */
+    line-height: 1.4;
+    letter-spacing: 0.026vw;
+    /* 0.5px */
+}
+
+/* Years Grid */
+.awards-years {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10.417vw;
+    /* 200px */
+    width: 100%;
+}
+
+.year-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.year-img {
+    max-height: 3.125vw;
+    /* ~60px */
+    width: auto;
+    display: block;
+    filter: grayscale(1) opacity(0.7);
+    /* Mờ và xám như ảnh mẫu */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.year-item:hover .year-img {
+    filter: grayscale(0) opacity(1);
+    transform: scale(1.1);
+}
+
+/* Năm hiện tại (Giữa) - Nổi bật sẵn */
+.year-current .year-img {
+    max-height: 4.167vw;
+    /* ~80px, to hơn */
+    filter: grayscale(0) opacity(1);
+    /* Rõ nét luôn */
+    transform: scale(1.1);
+}
+
+/* Bỏ các style cũ của text */
+.year-item::after {
+    display: none;
+}
+
+.year-current::after {
+    display: none;
+}
+
+/* Mobile Responsive for Awards */
+@media (max-width: 768px) {
+    .awards-section {
+        padding: 50px 0;
+    }
+
+    .awards-title {
+        font-size: 8vw;
+    }
+
+    .awards-description {
+        font-size: 3.5vw;
+        max-width: 90%;
+    }
+
+    .awards-years {
+        gap: 30px;
+    }
+
+    .year-item {
+        font-size: 6vw;
+    }
+
+    .year-current {
+        font-size: 8vw;
+    }
+}
+
+/* --- 6. STATS SECTION (Section 4) --- */
+.stats-section {
+    padding: 5.208vw 0;
+    /* 100px */
+    background: #fff;
+    color: #000;
+}
+
+.stats-container {
+    max-width: 72.917vw;
+    /* 1400px */
+    margin: 0 auto;
+    padding: 0 2.604vw;
+}
+
+/* Highlight Part (Top) */
+.stats-highlight {
+    display: flex;
+    align-items: center;
+    gap: 4.167vw;
+    /* 80px */
+    margin-bottom: 5.208vw;
+    /* 100px */
+}
+
+.stats-highlight-img {
+    flex: 0 0 20%;
+    /* Chiếm khoảng 20% chiều rộng */
+    display: flex;
+    justify-content: center;
+}
+
+.stats-highlight-img img {
+    max-width: 100%;
+    height: auto;
+    max-height: 15.625vw;
+    /* ~300px */
+    object-fit: contain;
+    /* Bỏ shadow theo yêu cầu */
+    filter: none;
+}
+
+.stats-highlight-content {
+    flex: 1;
+    text-align: left;
+}
+
+.highlight-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.125vw;
+    /* 60px */
+    font-weight: 800;
+    /* Extra bold */
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    color: #000;
+}
+
+/* Divider Line under Title */
+.highlight-divider {
+    width: 100%;
+    height: 0.156vw;
+    /* 3px */
+    background: #000;
+    margin: 0.521vw 0 1.042vw;
+    /* 10px 0 20px */
+}
+
+.highlight-subtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.25vw;
+    /* 24px */
+    font-weight: 700;
+    margin-bottom: 1.042vw;
+    /* 20px */
+    display: flex;
+    align-items: center;
+    gap: 0.521vw;
+    /* 10px */
+}
+
+.subtitle-icon {
+    height: 1.25vw;
+    /* 24px */
+    width: auto;
+}
+
+.highlight-desc {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    line-height: 1.6;
+    color: #333;
+    max-width: 90%;
+}
+
+/* Stats Grid (Bottom) */
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2.604vw;
+    /* 50px */
+}
+
+.stats-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.stats-icon {
+    height: 6.25vw;
+    /* Tăng gấp đôi từ 3.125vw -> 6.25vw (~120px) */
+    margin-bottom: 1.042vw;
+    /* 20px */
+    display: flex;
+    align-items: flex-end;
+}
+
+.stats-icon img,
+.stats-icon svg {
+    max-height: 100%;
+    width: auto;
+    max-width: 6.25vw;
+    /* Tăng gấp đôi chiều rộng tối đa */
+}
+
+.stats-number {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.604vw;
+    /* 50px */
+    font-weight: 800;
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 0.26vw;
+    /* 5px */
+}
+
+.stats-label {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25vw;
+    /* 24px */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+}
+
+/* Vertical Divider */
+.stats-divider-vert {
+    width: 0.052vw;
+    /* 1px */
+    height: 6.25vw;
+    /* 120px */
+    background: #000;
+    margin: 0 1.042vw;
+    /* 20px */
+    align-self: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-highlight {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .stats-highlight-img {
+        flex: 0 0 auto;
+    }
+
+    .stats-highlight-content {
+        text-align: center;
+    }
+
+    .highlight-title {
+        font-size: 8vw;
+    }
+
+    .highlight-subtitle {
+        justify-content: center;
+        font-size: 5vw;
+    }
+
+    .highlight-desc {
+        font-size: 4vw;
+        max-width: 100%;
+    }
+
+    .subtitle-icon {
+        height: 5vw;
+    }
+
+    .stats-grid {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .stats-item {
+        flex: 0 0 45%;
+        /* 2 items per row */
+        margin-bottom: 20px;
+    }
+
+    .stats-divider-vert {
+        display: none;
+        /* Hide dividers on mobile */
+    }
+
+    .stats-number {
+        font-size: 8vw;
+    }
+
+    .stats-label {
+        font-size: 4vw;
+    }
+
+    .stats-icon {
+        height: 50px;
+    }
+
+    .stats-icon img {
+        max-width: 50px;
+    }
+}
+
+/* --- 7. RECENT POSTS SECTION (Section 5) --- */
+.recent-posts-section {
+    padding: 5.208vw 0;
+    /* 100px */
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+    /* Prevent slider overflow */
+}
+
+/* --- 7. RECENT POSTS SECTION (Section 5) --- */
+.recent-posts-section {
+    padding: 2.604vw 0 5.208vw;
+    /* 50px top, 100px bottom */
+    background: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Header Wrapper */
+.recent-header-wrapper {
+    width: 100%;
+    margin-bottom: 2.604vw;
+    /* 50px */
+    position: relative;
+    /* Có thể thêm background đen ở 2 bên nếu muốn giống hệt ảnh crop (nhưng ảnh full cho thấy bar chạy hết) */
+}
+
+/* Top Decoration (Line2) */
+.recent-decoration-top {
+    width: 100%;
+    max-width: 20.833vw;
+    /* 400px */
+    margin: 0 auto 0.521vw;
+    /* 10px */
+    line-height: 0;
+    display: block;
+    /* Reset flex */
+}
+
+.recent-decoration-top img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Xóa các style cũ của Spikes */
+.spike-line,
+.spikes-group,
+.spike {
+    display: none;
+}
+
+/* Full Width Gradient Bar */
+.recent-header-bar-full {
+    width: 100%;
+    /* Gradient Metallic Silver/Black: 
+       Đen -> Xám đậm -> Sáng (Shine) -> Xám đậm -> Đen 
+       Tạo hiệu ứng kim loại bóng */
+    background: linear-gradient(180deg,
+            #444 0%,
+            #111 20%,
+            #222 45%,
+            #fff 50%,
+            #222 55%,
+            #111 80%,
+            #444 100%);
+    /* Thử gradient ngang để giống ảnh hơn (Dark edges, light center) */
+    background: linear-gradient(90deg,
+            #1a1a1a 0%,
+            #4d4d4d 20%,
+            #e0e0e0 45%,
+            #ffffff 50%,
+            #e0e0e0 55%,
+            #4d4d4d 80%,
+            #1a1a1a 100%);
+
+    padding: 0.521vw 0;
+    /* 10px */
+    position: relative;
+    box-shadow: 0 0.521vw 1.042vw rgba(0, 0, 0, 0.5);
+}
+
+/* Hiệu ứng cắt chéo sáng bóng (Shine Overlay) */
+.recent-header-bar-full::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-45deg);
+    pointer-events: none;
+}
+
+/* Bottom Shadow Line */
+.recent-decoration-bottom {
+    width: 100%;
+    height: 0.104vw;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+    margin-top: 0.521vw;
+}
+
+.recent-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.646vw;
+    /* 70px */
+    font-weight: 800;
+    /* Extra Bold */
+    font-style: italic;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -0.052vw;
+    text-shadow: 0.208vw 0.208vw 0 #000;
+    /* Shadow đen cứng */
+    position: relative;
+    z-index: 2;
+    padding: 0.26vw 0;
+}
+
+.recent-subtitle {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.833vw;
+    /* 16px */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.104vw;
+    /* 2px */
+    color: #000;
+    margin-bottom: 3.125vw;
+    /* 60px */
+}
+
+/* Slider Layout */
+.video-slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 90vw;
+    /* Limit width */
+    margin: 0 auto;
+}
+
+/* Khung nhìn slider (Scroll Snap) */
+.video-slider-viewport {
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    /* Ẩn thanh cuộn */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE */
+    padding: 1.042vw 0;
+    /* Space for shadows/hover */
+}
+
+.video-slider-viewport::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.video-slider-track {
+    display: flex;
+    gap: 1.042vw;
+    /* 20px */
+    width: max-content;
+    /* Ensure items align horizontally */
+    padding: 0 1.042vw;
+    /* Padding 2 bên để không bị cắt bóng */
+}
+
+/* Video Card (Vertical 9:16) */
+.video-item {
+    width: 14.063vw;
+    /* 270px based on 1920px screen */
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 0.521vw;
+    /* 10px */
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0.26vw 0.521vw rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.video-item:hover {
+    transform: translateY(-0.521vw);
+    /* Nhấc lên nhẹ */
+    box-shadow: 0 0.781vw 1.563vw rgba(0, 0, 0, 0.4);
+}
+
+.video-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-thumb-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.video-thumb-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+    transition: filter 0.3s;
+}
+
+.video-item:hover img {
+    filter: brightness(1.1);
+}
+
+/* Play Icon Overlay */
+.play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3.125vw;
+    /* 60px */
+    height: 3.125vw;
+    background: rgba(0, 0, 0, 0.4);
+    /* Nền mờ nhẹ */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.104vw solid rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+}
+
+.play-overlay svg {
+    width: 1.563vw;
+    /* 30px */
+    height: 1.563vw;
+    fill: #fff;
+    margin-left: 0.2vw;
+    /* Căn chỉnh tam giác play một chút */
+}
+
+.video-item:hover .play-overlay {
+    background: rgba(212, 167, 83, 0.9);
+    /* Màu vàng Gold khi hover */
+    border-color: #d4a753;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Navigation Buttons (Arrows) */
+.slider-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 3.125vw;
+    /* 60px */
+    height: 3.125vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.521vw;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.slider-btn svg {
+    width: 3.125vw;
+    height: 3.125vw;
+    stroke: #000;
+    /* Mũi tên màu đen */
+    stroke-width: 1.5;
+}
+
+.slider-btn:hover {
+    transform: scale(1.2);
+}
+
+/* --- 8. FREE ACCESS SECTION (Section 6) --- */
+.free-access-section {
+    padding: 0 0 5.208vw;
+    /* Bottom padding only, top handled by header wrapper */
+    background: #fff;
+    text-align: center;
+}
+
+.free-container {
+    max-width: 72.917vw;
+    /* 1400px */
+    margin: 0 auto;
+    padding: 0 2.604vw;
+}
+
+.free-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2.604vw;
+    /* 50px */
+    margin-top: 2.083vw;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.free-card {
+    width: 20.833vw;
+    /* 400px */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2.083vw;
+    /* Space for button hanging out */
+}
+
+/* 1. Title (Outline) */
+.free-card-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.083vw;
+    /* 40px */
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 0.521vw;
+    line-height: 1;
+    z-index: 2;
+    position: relative;
+
+    /* Outline Effect */
+    color: #fff;
+    -webkit-text-stroke: 0.052vw #d4a753;
+    /* 1px Orange Stroke */
+    text-stroke: 0.052vw #d4a753;
+    /* Fallback shadow if text-stroke not supported well */
+    text-shadow:
+        -1px -1px 0 #d4a753,
+        1px -1px 0 #d4a753,
+        -1px 1px 0 #d4a753,
+        1px 1px 0 #d4a753;
+}
+
+/* 2. Visual Container (Image + Box) */
+.free-card-visual {
+    width: 100%;
+    height: 26.042vw;
+    /* 500px - Fixed height for consistency */
+    position: relative;
+    border-radius: 0.781vw;
+    /* 15px */
+    overflow: hidden;
+    /* Crop image to radius */
+    box-shadow: 0 0.521vw 1.042vw rgba(0, 0, 0, 0.3);
+}
+
+.free-card-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Fill the card area */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.free-card:hover .free-card-visual img {
+    transform: scale(1.05);
+}
+
+/* 3. White Box Content */
+.free-card-box {
+    position: absolute;
+    bottom: 2.083vw;
+    /* Cách đáy visual một đoạn để chừa chỗ cho button */
+    left: 5%;
+    width: 90%;
+    background: #fff;
+    padding: 1.042vw;
+    /* 20px */
+    border-radius: 0.26vw;
+    /* 5px */
+    text-align: center;
+    box-shadow: 0 0.26vw 0.521vw rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 5.208vw;
+    /* 100px */
+}
+
+.free-card-box p {
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.833vw;
+    /* 16px */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    margin: 0;
+    line-height: 1.3;
+}
+
+/* 4. Button (Black Pill) */
+.free-card-btn {
+    position: absolute;
+    bottom: 0.521vw;
+    /* Đẩy lên 1 chút (cũ là 0) */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.625vw 2.083vw;
+    /* 12px 40px */
+    border-radius: 1.563vw;
+    /* 30px */
+    white-space: nowrap;
+    z-index: 10;
+    box-shadow: 0 0.26vw 0.521vw rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    border: 0.104vw solid #333;
+}
+
+.free-card-btn:hover {
+    background: #d4a753;
+    /* Gold hover */
+    color: #000;
+    border-color: #d4a753;
+    transform: translateX(-50%) translateY(-0.26vw);
+}
+
+/* --- 9. NEWSLETTER SECTION (Section 7) --- */
+.newsletter-section {
+    position: relative;
+    padding: 5.208vw 0;
+    /* Trả lại padding chuẩn 100px */
+    background-size: cover;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    min-height: 41.667vw;
+    /* 800px */
+    display: flex;
+    align-items: center;
+}
+
+.newsletter-container {
+    max-width: 72.917vw;
+    /* 1400px */
+    margin: 0 auto;
+    padding: 0 2.604vw;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* Đẩy nội dung sang phải */
+}
+
+.newsletter-content {
+    width: 45%;
+    /* Chiếm gần một nửa bên phải */
+    text-align: right;
+    /* Căn phải cho tiêu đề */
+}
+
+/* Title */
+.newsletter-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.604vw;
+    /* 50px */
+    font-weight: 800;
+    color: #000;
+    line-height: 1.1;
+    margin-bottom: 2.083vw;
+    /* 40px */
+    text-transform: uppercase;
+    text-shadow: 0.052vw 0.052vw 0 rgba(255, 255, 255, 0.5);
+}
+
+/* Form Box */
+.newsletter-form-box {
+    background: rgba(255, 215, 0, 0.15);
+    /* Màu vàng nhạt trong suốt */
+    border: 0.156vw solid #f0af2d;
+    /* Viền vàng cam */
+    border-radius: 1.563vw;
+    /* 30px */
+    padding: 2.083vw;
+    /* 40px */
+    text-align: left;
+    box-shadow: 0 0.521vw 1.563vw rgba(0, 0, 0, 0.1);
+    position: relative;
+    backdrop-filter: blur(0.26vw);
+    /* Làm mờ nhẹ nền phía sau form */
+}
+
+/* Inputs */
+.form-group {
+    margin-bottom: 1.302vw;
+    /* 25px */
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.781vw 1.042vw;
+    /* 15px 20px */
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.042vw;
+    /* 20px */
+    border: none;
+    border-radius: 0.521vw;
+    /* 10px */
+    outline: none;
+    box-shadow: inset 0 0.104vw 0.208vw rgba(0, 0, 0, 0.1);
+}
+
+.form-control::placeholder {
+    color: #999;
+}
+
+/* Checkbox & Disclaimer */
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.781vw;
+    /* 15px */
+    margin-bottom: 1.563vw;
+    /* 30px */
+}
+
+.form-check input[type="checkbox"] {
+    margin-top: 0.26vw;
+    width: 1.042vw;
+    /* 20px */
+    height: 1.042vw;
+    accent-color: #000;
+    cursor: pointer;
+}
+
+.form-check label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.625vw;
+    /* 12px */
+    font-weight: 500;
+    color: #000;
+    line-height: 1.4;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+/* Footer */
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-links {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.625vw;
+    /* 12px */
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.form-links a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 0.156vw;
+}
+
+.form-links a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+.btn-newsletter {
+    background: transparent;
+    border: 0.104vw solid #000;
+    border-radius: 1.563vw;
+    /* 30px */
+    padding: 0.521vw 1.563vw;
+    /* 10px 30px */
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    font-weight: 800;
+    /* Extra Bold */
+    font-style: italic;
+    color: #000;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-newsletter:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-0.156vw);
+    box-shadow: 0 0.26vw 0.521vw rgba(0, 0, 0, 0.3);
+}
+
+/* Bottom Decoration (Bot3) */
+/* Bottom Decoration (Bot3) - Moved Outside as Block */
+.newsletter-bottom-decoration-block {
+    width: 100%;
+    line-height: 0;
+    position: relative;
+    margin-top: -1px;
+    /* Kéo lên 1px để không bị hở trắng */
+    z-index: 5;
+    background-color: #fff;
+    /* Đặt nền trùng màu section trên để an toàn */
+}
+
+.newsletter-bottom-decoration-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    /* Newsletter Mobile */
+    .newsletter-section {
+        background-position: center top;
+        padding: 50px 0 80px;
+        /* Thêm padding bottom để không bị bot3 che mất nội dung */
+        min-height: auto;
+    }
+
+    .newsletter-container {
+        justify-content: center;
+    }
+
+    .newsletter-content {
+        width: 100%;
+        max-width: 500px;
+        text-align: center;
+    }
+
+    .newsletter-title {
+        font-size: 8vw;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.8);
+    }
+
+    .newsletter-form-box {
+        padding: 25px;
+        border-width: 2px;
+        border-radius: 20px;
+    }
+
+    .form-control {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    .form-check label {
+        font-size: 10px;
+        text-align: left;
+    }
+
+    .form-footer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .btn-newsletter {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+    }
+
+    /* Free Access Mobile */
+    .free-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .free-card {
+        width: 90vw;
+        max-width: 400px;
+    }
+
+    .free-card-title {
+        font-size: 8vw;
+        -webkit-text-stroke: 1px #d4a753;
+    }
+
+    .free-card-visual {
+        height: 100vw;
+        /* Square-ish on mobile or flexible */
+        max-height: 500px;
+    }
+
+    .free-card-box {
+        bottom: 30px;
+        padding: 15px;
+        min-height: 80px;
+    }
+
+    .free-card-box p {
+        font-size: 4vw;
+    }
+
+    .free-card-btn {
+        padding: 12px 40px;
+        font-size: 4.5vw;
+        border-radius: 30px;
+    }
+
+    /* Recent Posts Mobile */
+    .recent-decoration-top {
+        gap: 5px;
+    }
+
+    .recent-header-bar-full {
+        padding: 10px 0;
+    }
+
+    .recent-title {
+        font-size: 8vw;
+        text-shadow: 2px 2px 0 #000;
+    }
+
+    .recent-subtitle {
+        font-size: 3vw;
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    .video-item {
+        width: 45vw;
+        /* To hơn trên mobile */
+        border-radius: 10px;
+    }
+
+    .video-slider-track {
+        gap: 15px;
+    }
+
+    .play-overlay {
+        width: 40px;
+        height: 40px;
+    }
+
+    .play-overlay svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .slider-btn {
+        display: none;
+        /* Ẩn nút trên mobile để người dùng tự vuốt */
+    }
+
+    .video-slider-viewport {
+        padding-left: 20px;
+        /* Chừa lề để dễ vuốt */
+    }
+}
+
+/* --- NEW SECTION: BOOKING (PRIVATE SESSIONS) --- */
+.booking-section {
+    position: relative;
+    padding: 5.208vw 0 3.125vw;
+    /* 100px 0 60px */
+    background-color: #0d0d0d;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    overflow-x: clip;
+    /* Allow pseudo-elements to extend visually, but prevent scrollbar */
+    overflow-y: visible;
+}
+
+/* Dark Overlay */
+.booking-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+.booking-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+.booking-header {
+    text-align: center;
+    margin-bottom: 4.167vw;
+    /* 80px */
+}
+
+.booking-line-top {
+    margin-bottom: 1.042vw;
+    /* 20px */
+}
+
+.booking-line-top img {
+    margin: 0 auto;
+    width: 15.625vw;
+    /* 300px */
+    max-width: 100%;
+    /* No shadow */
+}
+
+.booking-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.646vw;
+    /* 70px */
+    font-weight: 800;
+    /* Extra Bold */
+    font-style: italic;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 0.521vw;
+    /* 10px */
+    line-height: 0.9;
+    text-shadow: 0 0.26vw 0.521vw rgba(0, 0, 0, 0.5);
+}
+
+.booking-subtitle {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.833vw;
+    /* 16px */
+    font-weight: 700;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 0.052vw;
+    /* 1px */
+}
+
+/* Content Layout */
+.booking-content-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+/* Main Content Area */
+.booking-main-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Info Row: Two Columns (Info Left + CTA Right) */
+.booking-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* Align items to bottom */
+    margin-top: 2.083vw;
+}
+
+.booking-info-left {
+    width: 55%;
+}
+
+.booking-cta-right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+/* Legacy support - keep old class just in case */
+.booking-left {
+    width: 55%;
+    padding-right: 2.604vw;
+    overflow: visible;
+}
+
+
+/* Service Item (Gold Bars) - Using Pseudo for Full Width */
+.service-item {
+    display: flex;
+    align-items: center;
+    background: none;
+    /* Remove direct background, use ::before */
+    border: none;
+    padding: 1.563vw 2.604vw;
+    margin-bottom: 2.083vw;
+    position: relative;
+    z-index: 1;
+    /* Content above pseudo */
+}
+
+/* Full Width Gold Bar Background */
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /* Full viewport width technique */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    /* Lighter, semi-transparent gold gradient */
+    background: linear-gradient(90deg,
+            rgba(180, 130, 30, 0) 0%,
+            rgba(200, 160, 50, 0.4) 20%,
+            rgba(220, 180, 60, 0.6) 50%,
+            rgba(200, 160, 50, 0.4) 80%,
+            rgba(180, 130, 30, 0) 100%);
+    z-index: -1;
+}
+
+/* Icon */
+.service-icon {
+    flex: 0 0 4.167vw;
+    /* 80px */
+    margin-right: 1.563vw;
+    /* 30px */
+    display: flex;
+    justify-content: center;
+}
+
+.service-icon img,
+.service-icon svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0.26vw 0.26vw rgba(0, 0, 0, 0.5));
+}
+
+/* Details */
+.service-details {
+    flex: 1;
+}
+
+.service-name {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.823vw;
+    /* 35px */
+    font-weight: 700;
+    font-style: italic;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 0.26vw;
+    /* 5px */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.042vw;
+    /* 20px */
+}
+
+.service-price {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.042vw;
+    /* 20px */
+    color: #d4a753;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.service-desc {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    color: #ddd;
+    line-height: 1.4;
+}
+
+/* Information Blocks */
+.info-block {
+    margin-bottom: 1.563vw;
+    /* 30px - reduced spacing */
+}
+
+.info-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25vw;
+    /* 24px */
+    color: #f0af2d;
+    /* Gold */
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.521vw;
+    /* 10px */
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.521vw;
+}
+
+.info-dash {
+    color: #888;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 0.26vw;
+}
+
+.info-inline-desc {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.833vw;
+    /* 16px */
+    color: #ccc;
+    font-style: normal;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.833vw;
+    /* 16px */
+    color: #fff;
+    margin-bottom: 0.417vw;
+    /* 8px */
+    position: relative;
+    padding-left: 0.833vw;
+    /* 16px */
+    line-height: 1.6;
+}
+
+.info-list li::before {
+    content: "•";
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Legacy Right Column - can be removed if not used */
+.booking-right {
+    width: 45%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 5;
+}
+
+/* Fighter Image - Absolute Overlay on Right Side */
+.booking-fighter-img {
+    position: absolute;
+    top: -10vw;
+    /* Move up more */
+    right: -8vw;
+    /* Extend more beyond container */
+    width: 55%;
+    /* Reduced by 10% */
+    max-width: 810px;
+    /* Reduced by 10% */
+    z-index: 5;
+    pointer-events: none;
+}
+
+.booking-fighter-img img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 1.042vw 2.5vw rgba(0, 0, 0, 0.8));
+}
+
+/* CTA Container - Now inside the info row */
+.booking-cta-container {
+    position: relative;
+    z-index: 10;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cta-label {
+    display: block;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.563vw;
+    /* 30px */
+    color: #fff;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 0.781vw;
+    /* 15px */
+    text-shadow: 0 0.104vw 0.208vw rgba(0, 0, 0, 0.8);
+}
+
+.btn-booking-large {
+    min-width: 18.75vw;
+    /* 360px */
+    height: 3.125vw;
+    /* 60px */
+    font-size: 1.146vw;
+    /* 22px */
+}
+
+/* FAQ Section */
+.booking-faq {
+    margin-top: 5.208vw;
+    /* 100px */
+    background: rgba(60, 60, 60, 0.85);
+    /* Dark gray semi-transparent */
+    border-radius: 1.042vw;
+    /* 20px rounded corners */
+    padding: 2.083vw 2.604vw;
+    /* 40px 50px */
+    backdrop-filter: blur(10px);
+}
+
+.faq-row {
+    display: flex;
+    gap: 3.125vw;
+    /* 60px */
+    margin-bottom: 0;
+    /* Remove margin, use padding instead */
+}
+
+.faq-row:first-child {
+    margin-bottom: 0.521vw;
+    /* 10px - small gap between rows */
+}
+
+.faq-item {
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    /* Subtle white border */
+    padding: 0.781vw 0;
+    /* 15px padding */
+}
+
+.faq-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 0.938vw;
+    /* 18px */
+    font-weight: 600;
+    padding: 0.521vw 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.faq-toggle .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.faq-toggle .arrow svg {
+    width: 1.042vw;
+    /* 20px */
+    height: 1.042vw;
+    stroke: rgba(255, 255, 255, 0.6);
+    transition: stroke 0.3s, transform 0.3s;
+}
+
+.faq-toggle:hover {
+    color: #f0af2d;
+    /* Gold on hover */
+}
+
+.faq-toggle:hover .arrow svg {
+    stroke: #f0af2d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .booking-section {
+        padding: 50px 0;
+    }
+
+    .booking-line-top img {
+        width: 200px;
+    }
+
+    .booking-title {
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    .booking-subtitle {
+        font-size: 12px;
+    }
+
+    .booking-content-wrapper {
+        flex-direction: column;
+    }
+
+    .booking-left {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .service-icon {
+        margin: 0 0 15px 0;
+        width: 60px;
+    }
+
+    .service-name {
+        font-size: 24px;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .service-price {
+        font-size: 16px;
+    }
+
+    .service-desc {
+        font-size: 14px;
+    }
+
+    .info-title {
+        font-size: 20px;
+        flex-wrap: wrap;
+    }
+
+    .info-inline-desc {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .info-list li {
+        font-size: 14px;
+        padding-left: 15px;
+    }
+
+    .booking-right {
+        width: 100%;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .booking-fighter-img {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .booking-cta-container {
+        margin-top: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-label {
+        font-size: 24px;
+    }
+
+    .btn-booking-large {
+        min-width: 250px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .faq-row {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 0px;
+    }
+
+    .faq-item {
+        margin-bottom: 15px;
+    }
+
+    .faq-toggle {
+        font-size: 16px;
+    }
+}
+
+/* ========================================
+   FORM MESSAGES
+======================================== */
+.form-message {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+.form-message.success {
+    background: rgba(46, 204, 113, 0.2);
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
+}
+
+.form-message.error {
+    background: rgba(231, 76, 60, 0.2);
+    border: 2px solid #e74c3c;
+    color: #e74c3c;
+}

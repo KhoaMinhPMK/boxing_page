@@ -1,0 +1,24 @@
+<svg width="400" height="30" viewBox="0 0 400 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+			<stop offset="0%" stop-color="#b88746"/>
+			<stop offset="50%" stop-color="#fdf5a6"/>
+			<stop offset="100%" stop-color="#b88746"/>
+		</linearGradient>
+	</defs>
+
+	<!-- Đường kẻ trái (Mảnh hơn) -->
+	<rect x="0" y="14.5" width="160" height="1" fill="url(#gold-gradient)"/>
+
+	<!-- Viên đá trái (Nhỏ, sắc nét) -->
+	<path d="M174 10 L179 15 L174 20 L169 15 Z" fill="url(#gold-gradient)"/>
+
+	<!-- Viên đá giữa (Lớn, cao) -->
+	<path d="M200 0 L210 15 L200 30 L190 15 Z" fill="url(#gold-gradient)"/>
+
+	<!-- Viên đá phải (Nhỏ, sắc nét) -->
+	<path d="M226 10 L231 15 L226 20 L221 15 Z" fill="url(#gold-gradient)"/>
+
+	<!-- Đường kẻ phải (Mảnh hơn) -->
+	<rect x="240" y="14.5" width="160" height="1" fill="url(#gold-gradient)"/>
+</svg>
